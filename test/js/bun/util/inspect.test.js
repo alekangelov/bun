@@ -353,7 +353,7 @@ it("new Date(..)", () => {
   expect(Bun.inspect(new Date("2023-03-27T" + hour + ":54:00"))).toBe("2023-03-27T09:54:00.000Z");
   expect(Bun.inspect(new Date(2023, 2, 27, -offset))).toBe("2023-03-27T00:00:00.000Z");
   expect(Bun.inspect(new Date(2023, 2, 27, 9 - offset, 54, 0))).toBe("2023-03-27T09:54:00.000Z");
-
+  expect(Bun.inspect(new Date("2020-09-21 15:19:06 +00:00"))).toBe("2020-09-21T15:19:06.000Z");
   expect(Bun.inspect(new Date("1679911059000"))).toBe("Invalid Date");
   expect(Bun.inspect(new Date("hello world"))).toBe("Invalid Date");
   expect(Bun.inspect(new Date("Invalid Date"))).toBe("Invalid Date");
